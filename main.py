@@ -30,6 +30,9 @@ def home():
 @app.post("/login")
 def login(data: LoginData):
 
+    print(data.email)
+    print(data.password)
+
     if data.email == "admin@test.com" and data.password == "1234":
 
         return {
